@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var axios = require('axios');
+const express = require('express');
+const router = express.Router();
+const axios = require('axios');
 const _ = require('lodash');
 const { map } = require('lodash');
 
@@ -28,9 +28,7 @@ router.get('/', function (req, res, next) {
 
 
         let list = listItemData.map((item) => {
-          // console.log(item)
-          nameArray.push(item.artistName)
-          imageArray.push(item.artworkUrl100)
+            nameArray.push(item)
           return item
         })
 
